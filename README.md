@@ -1,16 +1,38 @@
-# React + Vite
+# Task Tracker App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A premium, aesthetically pleasing Task Tracker designed for "Calm Productivity". Built with React, Vite, and modern CSS.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **✨ Premium UI**: Glassmorphism effects, smooth transitions, and a calming color palette.
+- **📝 Task Management**: Easily add, edit, and delete tasks.
+- **✅ Interaction**: Click on the checkbox or the task name to toggle completion.
+- **📊 Progress Tracking**: Visual daily progress bar keeps you motivated.
+- **💾 Auto-Save**: Tasks persist automatically using Local Storage.
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Framework**: [React](https://react.dev/) + [Vite](https://vitejs.dev/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Styling**: Vanilla CSS (Variables, Flexbox, Animations)
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1.  **Install dependencies**:
+    ```bash
+    npm install
+    ```
+
+2.  **Start the development server**:
+    ```bash
+    npm run dev
+    ```
+
+3.  **Open the app**:
+    Visit `http://localhost:5173` in your browser.
+
+## Project Structure
+
+- `src/components`: Reusable UI components (TaskItem, TaskList, ProgressBar).
+- `src/hooks`: Custom hooks for logic (useTasks, useLocalStorage).
+- `src/App.jsx`: Main application layout.
