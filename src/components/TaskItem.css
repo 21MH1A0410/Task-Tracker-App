@@ -1,0 +1,102 @@
+.task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--surface);
+    padding: 1rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-bottom: 0.75rem;
+    border: 1px solid var(--border);
+}
+
+.task-item:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.task-item.completed {
+    opacity: 0.7;
+}
+
+.task-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex: 1;
+}
+
+.task-checkbox {
+    appearance: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 2px solid var(--border);
+    border-radius: 50%;
+    cursor: pointer;
+    display: grid;
+    place-content: center;
+    transition: all 0.2s;
+    background-color: var(--surface);
+}
+
+/* Custom Checkbox Logic */
+.task-checkbox.checked {
+    background-color: var(--success);
+    border-color: var(--success);
+}
+
+.task-checkbox.checked svg {
+    animation: scaleIn 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+.task-text {
+    font-size: 1rem;
+    color: var(--text-main);
+    transition: color 0.2s;
+    cursor: pointer;
+    user-select: none;
+}
+
+.task-item.completed .task-text {
+    text-decoration: line-through;
+    color: var(--text-muted);
+}
+
+.task-actions {
+    display: flex;
+    gap: 0.5rem;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.task-item:hover .task-actions {
+    opacity: 1;
+}
+
+.icon-btn {
+    padding: 0.5rem;
+    border-radius: var(--radius);
+    color: var(--text-muted);
+    transition: background 0.2s, color 0.2s;
+}
+
+.icon-btn:hover {
+    background: var(--background);
+    color: var(--primary);
+}
+
+.icon-btn.delete:hover {
+    color: var(--danger);
+    background: #fee2e2;
+}
